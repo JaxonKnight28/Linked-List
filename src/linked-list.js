@@ -29,6 +29,10 @@ class LinkedList {
 
     remove(key) {
         //I need to handle the case where this.head == null
+        if (this.head == null) {
+            return null
+        }
+
         if (this.head.data.key == key) {
             this.head = this.head.next
             this.size -= 1;
